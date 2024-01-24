@@ -1,3 +1,3 @@
-const   JWT = "SECRET";
-
-module.exports={JWT}
+const JWT_SECRET = "SECRET_KEY";
+const PORT = 3000
+module.exports = { JWT_SECRET, PORT }
