@@ -5,7 +5,7 @@ const { User, Account } = require("../db");
 const { JWT_SECRET } = require('../config');
 const { authMiddleWare } = require("../middleware");
 
-router.get("/balance",authMiddleWare, async (req, res) => {
+router.get("/balance", authMiddleWare, async (req, res) => {
     const account = await Account.findOne({
         userId: req.headers.userid
     });
@@ -16,10 +16,10 @@ router.get("/balance",authMiddleWare, async (req, res) => {
 
 router.post("/transfer", authMiddleWare, async (req, res) => {
     const session = mongoose.startSession();
-   // await session.startTransaction();
+    // await session.startTransaction();
     const { amount, to } = req.body;
     const account = await Account.findOne({ userId: req.userId })//.session(session);
-        if (!account || account.balance < amount) {
+    if (!account || account.balance < amount) {
         //await session.abortTransaction();
         return res.status(400).json({
             message: "Insufficient balance"
