@@ -4,7 +4,7 @@ export const Appbar = () => {
             <div>PayTM App</div>
             <div>
                 <div>Hello</div>
-                <div className="rounded-full bg-slate-200">U</div>
+                <div className="rounded-full bg-slate-200"></div>
             </div>
         </div>
     )
