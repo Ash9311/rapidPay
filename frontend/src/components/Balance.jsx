@@ -12,10 +12,10 @@ export const Balance = ({ value, username }) => {
                 const authToken = localStorage.getItem('token');
 
                 // Make the API request with the authentication token included in the headers
-                const response = await axios.get("http://localhost:4000/api/v1/account/balance", {
+                const response = await axios.get("http://localhost:3000/api/v1/account/balance", {
                     headers: {
                         Authorization: `Bearer ${authToken}`,
-
+                        //  userid: username
                     }
                 });
                 setBalance(response.data.balance);
