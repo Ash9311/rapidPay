@@ -32,7 +32,8 @@ export const SendMoney = () => {
                                     Amount (in Rs)
                                 </label>
                                 <input
-                                    onClick={e => { setAmount(e.target.value) }}
+                                    onChange={e => { setAmount(e.target.value) }}
+                                    
                                     type="number"
                                     class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
                                     id="amount"

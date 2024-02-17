@@ -6,15 +6,15 @@ import { Balance } from "../components/Balance";
 import { Users } from "../components/Users";
 import { useLocation } from "react-router-dom";
 
-export const Dashboard = ({ user }) => {
+export const Dashboard = () => {
     const { state } = useLocation();
     const username = state && state.username;
     return (
         <div>
-            <Appbar />
-            <div className="m-8">
+            <Appbar username={username} />
+            <div className="m-8 flex justify-center balance-container">
 
-                <Balance value={"10,000"} username={username} />
+                <Balance value={"xxx"} username={username} />
                 <Users />
             </div>
         </div>

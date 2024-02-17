@@ -39,7 +39,7 @@ export const Users = () => {
     function User({ user }) {
         const navigate = useNavigate();
         return (
-            <div className="justify-between">
+            <div className="justify-between" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
                 <div className="flex">
                     <div className="flex flex-col rounded-full">{user.firstName[0]}</div>
 
