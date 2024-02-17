@@ -1,8 +1,10 @@
 const express = require("express");
 const { default: mongoose } = require("mongoose");
+require('dotenv').config();
 
 
-mongoose.connect("mongodb://localhost:27017/paytm");
+mongoose.connect(process.env.CONNECTION_STRING);
+//mongoose.connect("mongodb://localhost:27017/paytm");
 
 const userSchema = mongoose.Schema({
     username: String,

@@ -7,10 +7,10 @@ const { authMiddleWare } = require("../middleware");
 
 router.get("/balance", authMiddleWare, async (req, res) => {
     const account = await Account.findOne({
-        userId: req.headers.userid
+        userId: req.userId
     });
     res.json({
-        balance: account.balance
+        balance: account?.balance
     })
 })
 
