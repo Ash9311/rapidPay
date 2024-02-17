@@ -15,7 +15,7 @@ export const Balance = ({ value, username }) => {
                 const response = await axios.get("http://localhost:4000/api/v1/account/balance", {
                     headers: {
                         Authorization: `Bearer ${authToken}`,
-                        
+
                     }
                 });
                 setBalance(response.data.balance);
@@ -28,7 +28,7 @@ export const Balance = ({ value, username }) => {
     }, []); // Empty dependency array ensures the effect runs only once when the component mounts
 
     return (
-        <div className="flex r">
+        <div className="">
             <div>Your Balance: {balance !== null ? balance : 'Loading...'} </div>
             <span>{username.slice(0, username.indexOf('@'))}</span>
         </div>

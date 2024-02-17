@@ -28,7 +28,7 @@ export const Users = () => {
                 Users
             </div>
             <div>
-                <input onChange={(e) => { setFilter(e.target.value) }} type="text" placeholder="Search users..." className="w-full border rounded border-slate-200" />
+                <input onChange={(e) => { setFilter(e.target.value) }} type="text" placeholder="Search users..." className="w-full border rounded border-slate-200 mb-5" />
             </div>
             <div>
                 {users.map(user => <User user={user} />)}
@@ -41,9 +41,9 @@ export const Users = () => {
         return (
             <div className="justify-between" style={{ display: 'flex', justifyContent: 'space-around', alignItems: 'center' }}>
                 <div className="flex">
-                    <div className="flex flex-col rounded-full">{user.firstName[0]}</div>
+                    <span className="rounded-full bg-gray-500 text-white min-w-8 flex items-center justify-center">{user.firstName[0]}</span>
 
-                    <div>{user.firstName} {user.lastName}</div>
+                    <span className="ml-5 min-w-60">{user.firstName} {user.lastName}</span>
                 </div>
                 <div>
                     <Button onClick={(e) => { navigate("/send?id=" + user._id + "&name=" + user.firstName) }} label={"Send Money"}></Button>
