@@ -43,8 +43,8 @@ body {
 .app-bar-container{
   display: flex;
   justify-content: space-between;
-  margin-left: 25px;
-  
+  padding-left: 25px;
+  background-color: black;
 }
 
 .balance-container{
