@@ -16,7 +16,7 @@ export const Users = () => {
             const headers = {
                 Authorization: `Bearer ${authToken}`
             };
-            axios.get(`http://localhost:3000/api/v1/user/bulk?filter=${filter}`, { headers })
+            axios.get(`https://rapid-pay.vercel.app/api/v1/user/bulk?filter=${filter}`, { headers })
                 .then(response => {
                     setUsers(response.data.users);
                 })

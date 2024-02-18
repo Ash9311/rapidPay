@@ -22,7 +22,7 @@ export const Signin = () => {
                     <div className="pt-4">
                         <Button label={"Sign in"}
                             onClick={async () => {
-                                const reponse = await axios.post("http://localhost:3000/api/v1/user/signin", {
+                                const reponse = await axios.post("https://rapid-pay.vercel.app/api/v1/user/signin", {
                                     username,
                                     password
                                 });
