@@ -17,8 +17,8 @@ export const Signin = () => {
                 <div className="rounded-lg bg-white w-80 text-center p-2 h-max px-4 customized-container">
                     <Heading label={"Sign In"} />
                     <SubHeading label={"Enter your credentials to access your account"} />
-                    <InputBox onChange={e => { setUserName(e.target.value) }} label={"Email"} placeholder="johndoes@example.com" />
-                    <InputBox onChange={e => setPassword(e.target.value)} label={"Password"} placeholder={"xxx"} />
+                    <InputBox onChange={e => { setUserName(e.target.value) }} label={"Email"} placeholder="johndoe" />
+                    <InputBox onChange={e => setPassword(e.target.value)} label={"Password"} placeholder={"1234"} />
                     <div className="pt-4">
                         <Button label={"Sign in"}
                             onClick={async () => {
