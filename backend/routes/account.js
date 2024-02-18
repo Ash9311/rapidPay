@@ -4,7 +4,7 @@ const router = express.Router();
 const { User, Account } = require("../db");
 const { JWT_SECRET } = require('../config');
 const { authMiddleWare } = require("../middleware");
-
+require('dotenv').config();
 router.get("/balance", authMiddleWare, async (req, res) => {
     const account = await Account.findOne({
         userId: req.userId
