@@ -12,9 +12,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use("/api/v1", mainRouter)
 
-app.use("/", (req, res) => {
-    res.json({ message: "welcome to rapidPay API" })
-})
+// app.use("/", (req, res) => {
+//     res.json({ message: "welcome to rapidPay API" })
+// })
 app.listen(process.env.PORT, () => { console.log(`server listening on port ${process.env.PORT}`) })
 
 module.exports = app;
